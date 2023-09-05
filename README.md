@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Authentication and posts
 
-Things you may want to cover:
+The application allows a user to log in and generate a post. When the page
+is view without being logged in the viewer can not see who made the post. If
+the user is logged in the post are no longer anonymous.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
