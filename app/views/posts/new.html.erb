@@ -1,0 +1,25 @@
+<%= render "shared/navigation" %>
+<!-- Form to generate a new post -->
+<div class = "grid-cols-1 p-5">
+  <%= form_with model: @post do |form| %>
+    <div class="">
+      <%= form.label :title, class: "form-label text-grey-700 sm:text-xl md:text-1xl" %>
+      <%= form.text_field :title, class: "border-grey-light w-2/4" %>
+       <% @post.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+    </div>
+    <div class="">
+      <%= form.label :body, class: "text-grey-700" %>
+      <%= form.text_area :body, class: "block border border-grey-light w-full p-3 rounded mb-4" %>
+       <% @post.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+    </div>
+    
+    <div class="">
+      <%= form.submit "Create", class: "block border border-grey-light w-full p-3 rounded mb-4" %>
+    </div>
+  <% end %>
+</div>
+
